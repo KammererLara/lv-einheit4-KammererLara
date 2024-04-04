@@ -3,20 +3,20 @@ package org.lecture;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ConfigurastionManager {
-    private static ConfigurastionManager instance;
+public class ConfigurationManager {
+    private static ConfigurationManager instance;
     private Map<String, String> configuration;
 
-    private ConfigurastionManager() {
+    private ConfigurationManager() {
         configuration = new HashMap<>();
         configuration.put("username", "admin");
         configuration.put("password", "password123");
         configuration.put("server", "localhost");
     }
 
-    public static synchronized ConfigurastionManager getInstance() {
+    public static synchronized ConfigurationManager getInstance() {
         if (instance == null)
-            instance = new ConfigurastionManager();
+            instance = new ConfigurationManager();
         return instance;
     }
 
